@@ -1,0 +1,10 @@
+# curl http://localhost:8080/demo/add -d name=First -d email=someemail@someemailprovider.com
+POST http://localhost:8080/demo/add
+Content-Type: application/x-www-form-urlencoded
+
+name=First&email=someemail@someemailprovider.com
+
+###
+
+GET http://localhost:8080/demo/all
+###
