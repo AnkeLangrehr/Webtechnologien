@@ -3,12 +3,9 @@ package de.fom.webtechnologien.web.rest;
 import de.fom.webtechnologien.web.entities.User;
 import de.fom.webtechnologien.web.repos.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller // This means that this class is a Controller
 @RequestMapping(path="/demo") // This means URL's start with /demo (after Application path)
@@ -18,16 +15,15 @@ public class UserController {
     private UserRepository userRepository;
 
     @PostMapping(path="/add") // Map ONLY POST Requests
-    public @ResponseBody String addNewUser (@RequestParam String name
-            , @RequestParam String email) {
+    public @ResponseBody ResponseEntity<User> addNewUser (@RequestBody User user) {
         // @ResponseBody means the returned String is the response, not a view name
         // @RequestParam means it is a parameter from the GET or POST request
 
         User n = new User();
-        n.setName(name);
-        n.setEmail(email);
+        n.setName(user.getName());
+        n.setEmail(user.getEmail());
         userRepository.save(n);
-        return "Saved";
+        return ResponseEntity.ok(n);
     }
 
     @GetMapping(path="/all")
