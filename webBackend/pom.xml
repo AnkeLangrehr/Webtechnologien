@@ -49,8 +49,19 @@
 			<version>8.0.33</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/se.michaelthelin.spotify/spotify-web-api-java -->
+		<dependency>
+			<groupId>se.michaelthelin.spotify</groupId>
+			<artifactId>spotify-web-api-java</artifactId>
+			<version>8.3.3</version>
+		</dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
 
-	</dependencies>
+
+    </dependencies>
 
 	<build>
 		<plugins>

@@ -1,0 +1,30 @@
+<!--<h2>My Heroes</h2>-->
+<!--<ul class="Artist">-->
+<!--  <li *ngFor="let artist of artists">-->
+<!--    <button type="button">-->
+<!--      <span class="badge">{{artist.id}}</span>-->
+<!--      <span class="name">{{artist.name}}</span>-->
+<!--    </button>-->
+<!--  </li>-->
+<!--</ul>-->
+<div class="tableCss">
+<table class="table table-striped ">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let artist of artists; index as i" [routerLink]="['/artist/', artist.id]" class="clickable">
+    <th scope="row">{{ i + 1 }}</th>
+    <td>
+      {{ artist.name }}
+    </td>
+  </tr>
+  </tbody>
+</table>
+</div>
+<div>
+
+</div>

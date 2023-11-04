@@ -6,5 +6,19 @@ name=First&email=someemail@someemailprovider.com
 
 ###
 
+# @no-redirect
 GET http://localhost:8080/demo/all
+###
+
+
+#############
+GET http://localhost:8080/spotify/getCategories
+###
+POST http://localhost:8080/spotify/createPlaylist
+name:HalloWelt
+###
+GET http://localhost:8080/api/user-top-songs
+Content-Type: application/x-www-form-urlencoded
+
+user-id=11143388735
 ###
