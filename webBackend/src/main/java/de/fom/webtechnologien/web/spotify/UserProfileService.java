@@ -1,4 +1,4 @@
-package de.fom.webtechnologien.web.rest;
+package de.fom.webtechnologien.web.spotify;
 
 
 import de.fom.webtechnologien.web.entities.UserDetails;

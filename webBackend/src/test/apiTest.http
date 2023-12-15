@@ -22,3 +22,8 @@ Content-Type: application/x-www-form-urlencoded
 
 user-id=11143388735
 ###
+
+GET http://localhost:8080/album/1
+
+###
+GET http://localhost:8080/album/all
