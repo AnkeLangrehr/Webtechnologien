@@ -4,8 +4,6 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 @Entity
-@Getter
-@Setter
 public class Artist {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -17,4 +15,27 @@ public class Artist {
     @JoinColumn(name = "record_label_id")
     RecordLabel recordLabel;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public RecordLabel getRecordLabel() {
+        return recordLabel;
+    }
+
+    public void setRecordLabel(RecordLabel recordLabel) {
+        this.recordLabel = recordLabel;
+    }
 }

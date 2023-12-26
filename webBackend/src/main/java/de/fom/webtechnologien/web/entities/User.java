@@ -4,10 +4,10 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity // This tells Hibernate to make a table out of this class
+import java.util.ArrayList;
+import java.util.List;
 
-@Getter
-@Setter
+@Entity // This tells Hibernate to make a table out of this class
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -17,9 +17,42 @@ public class User {
 
     private String email;
 
+    private Role role = Role.USER;
 
-    private enum Role {
+    public enum Role {
         ADMIN, USER
     }
 
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
 }

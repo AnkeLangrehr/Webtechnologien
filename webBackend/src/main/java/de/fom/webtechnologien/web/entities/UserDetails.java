@@ -32,6 +32,5 @@ public class UserDetails implements Serializable {
     @Column(name = "REF_ID")
     private String refId;
 
-    // More information as per your need
 
 }
