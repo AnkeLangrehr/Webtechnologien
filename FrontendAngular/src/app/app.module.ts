@@ -14,6 +14,8 @@ import {NgbCarousel, NgbNav, NgbNavItem, NgbNavOutlet, NgbSlide} from "@ng-boots
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { ArtistsListComponent } from './components/music/artists-list/artists-list.component';
 import { ArtistDetailComponent } from './components/music/artist-detail/artist-detail.component';
+import {ArtistService} from "./model/Services/artist-service";
+import {AlbumService} from "./model/Services/album-service";
 
 @NgModule({
   declarations: [
@@ -37,7 +39,7 @@ import { ArtistDetailComponent } from './components/music/artist-detail/artist-d
     NgbNavItem,
     NgbNav
   ],
-  providers: [UserService],
+  providers: [UserService, ArtistService, AlbumService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

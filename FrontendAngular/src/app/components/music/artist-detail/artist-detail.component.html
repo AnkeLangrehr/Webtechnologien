@@ -1,2 +1,18 @@
-<p>artist-detail works!</p>
-<button class=" btn btn-secondary" routerLink="/artists">Zurück</button>
+
+<div class="content" role="main">
+  <div class="row">
+    <div class="col-sm">
+      <p>artist-detail works!</p>
+      <p>Artist Details are:</p>
+      <p>{{artist.id}} </p>
+      <p>{{artist.name}} </p>
+      <p>{{artist.recordLabel}}</p>
+    </div>
+    <div class="col-sm">
+      <img [src]="artist.imageLink">
+    </div>
+  </div>
+</div>
+<div>
+  <button class=" btn btn-secondary" routerLink="/artists">Zurück</button>
+</div>

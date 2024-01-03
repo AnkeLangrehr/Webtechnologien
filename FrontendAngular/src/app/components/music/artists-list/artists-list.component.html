@@ -10,12 +10,13 @@
   <tr *ngFor="let artist of artists; index as i" [routerLink]="['/artist/', artist.id]" class="clickable">
     <th scope="row">{{ i + 1 }}</th>
     <td>
+      {{artist.id}}
       {{ artist.name }}
+      {{artist.recordLabel}}
     </td>
   </tr>
   </tbody>
 </table>
 </div>
 <div>
-
 </div>

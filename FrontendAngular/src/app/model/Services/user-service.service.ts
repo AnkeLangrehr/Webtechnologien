@@ -6,11 +6,11 @@ import {Observable} from 'rxjs';
 @Injectable()
 export class UserService {
 
-  private usersUrl: string='api/demo/all';
-  private userAdd:string='/api/demo/add'
+  private usersUrl: string='api/user/all';
+  private userAdd:string='/api/user/add'
 
   constructor(private http: HttpClient) {
-    this.usersUrl = 'api/demo/all';
+    this.usersUrl = 'api/user/all';
   }
 
   public findAll(): Observable<User[]> {

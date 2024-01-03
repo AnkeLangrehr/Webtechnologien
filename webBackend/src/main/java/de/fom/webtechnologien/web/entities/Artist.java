@@ -11,6 +11,8 @@ public class Artist {
 
     private String name;
 
+    private String imageLink;
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "record_label_id")
     RecordLabel recordLabel;
@@ -37,5 +39,13 @@ public class Artist {
 
     public void setRecordLabel(RecordLabel recordLabel) {
         this.recordLabel = recordLabel;
+    }
+
+    public String getImageLink() {
+        return imageLink;
+    }
+
+    public void setImageLink(String imageLink) {
+        this.imageLink = imageLink;
     }
 }

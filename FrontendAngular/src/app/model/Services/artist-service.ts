@@ -2,23 +2,32 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { User } from '../DTO/User'
 import {Observable} from 'rxjs';
+import {Artist} from "../DTO/Artist";
 
 @Injectable()
 export class ArtistService {
 
-  private usersUrl: string='api/artist/all';
-  private userAdd:string='/api/demo/add'
+  private artistAllUrl: string='api/artist/all';
+  private artistAdd:string='/api/artist/add';
+  private artistFindByIDUrl: string ='/api/artist/'
 
   constructor(private http: HttpClient) {
-    this.usersUrl = 'api/demo/all';
+    this.artistFindByIDUrl='/api/artist/';
+    this.artistAdd='/api/artist/add';
+    this.artistAllUrl ='/api/artist/all';
   }
 
-  public findAll(): Observable<User[]> {
-    return this.http.get<User[]>(this.usersUrl);
+  public findAll(): Observable<Artist[]> {
+    return this.http.get<Artist[]>(this.artistAllUrl);
   }
 
-  public save(user: User) {
-    console.log(user.name, user.email);
-    return this.http.post<User>(this.userAdd, user);
+  public save(artist: Artist) {
+    console.log(artist.name, artist.recordLabel);
+    return this.http.post<Artist>(this.artistAdd, artist);
+  }
+
+  public findByID(id: string){
+    return this.http.get<Artist>(this.artistFindByIDUrl+id);
+
   }
 }

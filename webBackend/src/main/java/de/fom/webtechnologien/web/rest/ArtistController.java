@@ -25,6 +25,7 @@ public class ArtistController {
         Artist n = new Artist();
         n.setName(artist.getName());
         n.setRecordLabel(artist.getRecordLabel());
+        n.setImageLink(artist.getImageLink());
         artistRepository.save(n);
         return ResponseEntity.ok(n);
     }
