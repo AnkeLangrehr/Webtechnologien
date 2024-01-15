@@ -1,8 +1,6 @@
 package de.fom.webtechnologien.web.entities;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
 
 
 @Entity
@@ -16,6 +14,8 @@ public class Song {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "album_id")
     Album album;
+
+    private String songUrl;
 
 
     public Integer getId() {
@@ -40,5 +40,13 @@ public class Song {
 
     public void setAlbum(Album album) {
         this.album = album;
+    }
+
+    public String getSongUrl() {
+        return songUrl;
+    }
+
+    public void setSongUrl(String songUrl) {
+        this.songUrl = songUrl;
     }
 }

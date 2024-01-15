@@ -3,15 +3,15 @@
     <table class="table table-bordered table-striped">
       <thead class="thead-dark">
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">Name</th>
+        <th scope="col">Username</th>
+        <th scope="col">Role</th>
         <th scope="col">Email</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let u of users">
-        <td>{{ u.id }}</td>
-        <td>{{ u.name }}</td>
+        <td>{{ u.username}}</td>
+        <td>{{ u.role }}</td>
         <td>{{u.email}}</td>
       </tr>
       </tbody>

@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { UserListComponent } from './User/user-list/user-list.component';
-import { UserFormComponent } from './User/user-form/user-form.component';
 
 import { UserService } from './model/Services/user-service.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -16,17 +15,23 @@ import { ArtistsListComponent } from './components/music/artists-list/artists-li
 import { ArtistDetailComponent } from './components/music/artist-detail/artist-detail.component';
 import {ArtistService} from "./model/Services/artist-service";
 import {AlbumService} from "./model/Services/album-service";
+import { SongsComponent } from './components/music/songs/songs.component';
+import { SongDetailsComponent } from './components/music/song-details/song-details.component';
+import { VideoPlayerComponent } from './components/music/video-player/video-player.component';
+import {YouTubePlayerModule} from "@angular/youtube-player";
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
-    UserFormComponent,
     NavbarComponent,
     MainViewComponent,
     LoginFormComponent,
     ArtistsListComponent,
-    ArtistDetailComponent
+    ArtistDetailComponent,
+    SongsComponent,
+    SongDetailsComponent,
+    VideoPlayerComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,8 @@ import {AlbumService} from "./model/Services/album-service";
     NgbSlide,
     NgbNavOutlet,
     NgbNavItem,
-    NgbNav
+    NgbNav,
+    YouTubePlayerModule
   ],
   providers: [UserService, ArtistService, AlbumService],
   bootstrap: [AppComponent]

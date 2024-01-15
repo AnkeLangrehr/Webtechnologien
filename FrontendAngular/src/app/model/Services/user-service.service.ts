@@ -18,7 +18,7 @@ export class UserService {
   }
 
   public save(user: User) {
-    console.log(user.name, user.email);
+    console.log(user.username, user.email);
     return this.http.post<User>(this.userAdd, user);
   }
 }

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Artist} from '../../../model/DTO/Artist';
 import {ArtistService} from '../../../model/Services/artist-service';
+import { NgbCarouselConfig, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-artists-list',
@@ -9,8 +10,13 @@ import {ArtistService} from '../../../model/Services/artist-service';
 })
 export class ArtistsListComponent implements OnInit {
   artists: Artist[]=[];
+  showNavigationArrows = false;
+  showNavigationIndicators = false;
+  images = ['../../../../assets/music/pexels-jessica-lewis-thepaintedsquare-1010519.jpg','../../../../assets/music/pexels-stephen-niemeier-63703.jpg'];
 
-  constructor(private artistService: ArtistService) {
+  constructor(private artistService: ArtistService,config: NgbCarouselConfig) {
+    config.showNavigationArrows = true;
+    config.showNavigationIndicators = true;
   }
 
   ngOnInit() {

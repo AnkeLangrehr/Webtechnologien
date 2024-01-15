@@ -1,8 +1,7 @@
 package de.fom.webtechnologien.web.entities;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+
 @Entity
 public class Artist {
     @Id

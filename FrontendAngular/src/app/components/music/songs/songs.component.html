@@ -1,0 +1,28 @@
+<p>Schön, dass du dich für unsere Songs interessierst :) Anbei siehst du alle Lieder, die es in der Datenbank
+  gibt.
+  Wähl' doch einfach mal eins aus. Dann siehst Du auch noch mehr Details und kannst sogar rein hören.</p>
+<div class="">
+  <table class="table table-striped ">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Album</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let song of songs; index as i" [routerLink]="['/songs/', song.id]" class="clickable">
+      <!--    <th scope="row">{{ i + 1 }}</th>-->
+      <td>
+        {{song.id}}
+      </td>
+      <td>
+        {{ song.name }}
+      </td>
+      <td>
+        {{song.album}}
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

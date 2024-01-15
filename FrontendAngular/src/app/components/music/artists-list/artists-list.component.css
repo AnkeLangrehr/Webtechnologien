@@ -1,7 +1,26 @@
 .clickable {
   cursor: pointer;
 }
-.tableCss{
+
+.tableCss {
   padding-top: 50px;
-  left: initial;
+  padding-bottom: 50px;
+  margin-left: -280px;
+}
+
+.spalte-1 {
+  float: left;
+  width: 100%;
+}
+
+.spalte-2 {
+  float: left;
+  padding-left: 20px;
+  width: 20%;
+  height: 300px;
+}
+
+.sideCarouselCss {
+  width: 280px;
+  padding-top: 50px;
 }

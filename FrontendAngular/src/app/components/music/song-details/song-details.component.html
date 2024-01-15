@@ -1,0 +1,19 @@
+<div class="content" role="main">
+  <div class="row">
+    <div class="col-sm">
+      <p>song works!</p>
+      <p>song Details are:</p>
+      <p>{{song.id}} </p>
+      <p>{{song.name}} </p>
+    </div>
+<!--    <div class="col-sm"> TBD ImageLink/Video-->
+<!--      <img [src]="song.imageLink">-->
+<!--    </div>-->
+  </div>
+</div>
+<div>
+  <button class=" btn btn-secondary" routerLink="/artists">Zurück</button>
+</div>
+<div>
+ <app-video-player [videoId]="song.songUrl"></app-video-player>
+</div>
