@@ -1,3 +1,7 @@
 .clickable {
   cursor: pointer;
 }
+.tableCss {
+  padding-top: 50px;
+  margin-left: -270px;
+}

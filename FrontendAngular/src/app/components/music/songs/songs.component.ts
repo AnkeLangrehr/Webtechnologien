@@ -2,7 +2,9 @@ import {Component, PipeTransform} from '@angular/core';
 import {Song} from "../../../model/DTO/Song";
 import {SongService} from "../../../model/Services/song.service";
 import {DecimalPipe} from "@angular/common";
-import {map, startWith} from "rxjs";
+import {map, Observable, startWith} from "rxjs";
+import {AlbumService} from "../../../model/Services/album-service";
+import {Album} from "../../../model/DTO/Album";
 
 
 @Component({
@@ -13,16 +15,17 @@ import {map, startWith} from "rxjs";
 export class SongsComponent {
   songs: Song[] = [];
 
-
-  constructor(private songService: SongService) {
+  constructor(private songService: SongService, private albumService:AlbumService) {
 
   }
 
   ngOnInit() {
     this.songService.findAll().subscribe(data => {
-      //Album Service Mapping
       console.log(data);
       this.songs = data;
     });
   }
+
 }
+
+
