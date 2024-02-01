@@ -7,6 +7,8 @@ import {ArtistsListComponent} from "./components/music/artists-list/artists-list
 import {ArtistDetailComponent} from "./components/music/artist-detail/artist-detail.component";
 import {SongsComponent} from "./components/music/songs/songs.component";
 import {SongDetailsComponent} from "./components/music/song-details/song-details.component";
+import {PlaylistComponent} from "./components/music/playlist/playlist.component";
+import {PlaylistDetailComponent} from "./components/music/playlist-detail/playlist-detail.component";
 
 const routes: Routes = [
   { path: '',   redirectTo: 'main', pathMatch: 'full' }, // redirect to `first-component`
@@ -16,6 +18,8 @@ const routes: Routes = [
   {path: 'artists', component: ArtistsListComponent},
   {path: 'artist/:id', component: ArtistDetailComponent},
   {path: 'songs', component: SongsComponent},
+  {path: 'playlists', component: PlaylistComponent},
+  {path: 'playlists/id', component: PlaylistDetailComponent},
   {path: 'songs/:id', component: SongDetailsComponent}
 ];
 

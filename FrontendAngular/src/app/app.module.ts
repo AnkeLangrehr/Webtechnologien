@@ -19,6 +19,9 @@ import { SongsComponent } from './components/music/songs/songs.component';
 import { SongDetailsComponent } from './components/music/song-details/song-details.component';
 import { VideoPlayerComponent } from './components/music/video-player/video-player.component';
 import {YouTubePlayerModule} from "@angular/youtube-player";
+import { PlaylistComponent } from './components/music/playlist/playlist.component';
+import { PlaylistDialogComponent } from './components/music/playlist-dialog/playlist-dialog.component';
+import { PlaylistDetailComponent } from './components/music/playlist-detail/playlist-detail.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import {YouTubePlayerModule} from "@angular/youtube-player";
     SongsComponent,
     SongDetailsComponent,
     VideoPlayerComponent,
+    PlaylistComponent,
+    PlaylistDialogComponent,
+    PlaylistDetailComponent,
   ],
   imports: [
     BrowserModule,

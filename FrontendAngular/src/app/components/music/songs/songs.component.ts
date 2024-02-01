@@ -1,6 +1,7 @@
 import {Component, PipeTransform} from '@angular/core';
 import {Song} from "../../../model/DTO/Song";
 import {SongService} from "../../../model/Services/song.service";
+import {PlaylistDialogComponent} from "../playlist-dialog/playlist-dialog.component";
 import {DecimalPipe} from "@angular/common";
 import {map, Observable, startWith} from "rxjs";
 import {AlbumService} from "../../../model/Services/album-service";
@@ -14,8 +15,9 @@ import {Album} from "../../../model/DTO/Album";
 })
 export class SongsComponent {
   songs: Song[] = [];
+  selectedSong: Song;
 
-  constructor(private songService: SongService, private albumService:AlbumService) {
+  constructor(private songService: SongService) {
 
   }
 
@@ -26,6 +28,11 @@ export class SongsComponent {
     });
   }
 
+  onButtonClicked(song: Song, PlaylistDialog: HTMLDialogElement) {
+    PlaylistDialog.show();
+    this.selectedSong=song;
+
+  }
 }
 
 

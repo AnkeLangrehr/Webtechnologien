@@ -2,6 +2,10 @@ package de.fom.webtechnologien.web.entities;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 
 @Entity
 public class Song {
@@ -13,7 +17,18 @@ public class Song {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "album_id")
-    Album album;
+    private Album album;
+
+    private long duration;
+
+    @ManyToMany(fetch = FetchType.LAZY,
+            cascade = {
+                    CascadeType.PERSIST,
+                    CascadeType.MERGE
+            },
+            mappedBy = "songs")
+    private Set<Playlist> playlists = new HashSet<>();
+
 
     private String songUrl;
 
@@ -48,5 +63,21 @@ public class Song {
 
     public void setSongUrl(String songUrl) {
         this.songUrl = songUrl;
+    }
+
+    public Set<Playlist> getPlaylists() {
+        return playlists;
+    }
+
+    public void setPlaylists(Set<Playlist> playlists) {
+        this.playlists = playlists;
+    }
+
+    public long getDuration() {
+        return duration;
+    }
+
+    public void setDuration(long duration) {
+        this.duration = duration;
     }
 }

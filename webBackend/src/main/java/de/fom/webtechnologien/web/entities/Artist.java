@@ -14,7 +14,7 @@ public class Artist {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "record_label_id")
-    RecordLabel recordLabel;
+    private RecordLabel recordLabel;
 
     public Integer getId() {
         return id;

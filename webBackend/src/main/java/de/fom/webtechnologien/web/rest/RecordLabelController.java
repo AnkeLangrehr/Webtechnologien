@@ -18,7 +18,7 @@ public class RecordLabelController {
 
 
     @PostMapping(path="/add") // Map ONLY POST Requests
-    public @ResponseBody ResponseEntity<RecordLabel> addNewAlbum (@RequestBody RecordLabel recordLabel) {
+    public @ResponseBody ResponseEntity<RecordLabel> addNewRecordLabel (@RequestBody RecordLabel recordLabel) {
         RecordLabel n = new RecordLabel();
         n.setName(recordLabel.getName());
         recordLabelRepository.save(n);
@@ -26,11 +26,11 @@ public class RecordLabelController {
     }
 
     @GetMapping(path="/all")
-    public @ResponseBody Iterable<RecordLabel> getAllAlbum() {
+    public @ResponseBody Iterable<RecordLabel> getAllRecordLabels() {
         return recordLabelRepository.findAll();
     }
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public @ResponseBody Optional<RecordLabel> getSpecificAlbum(@PathVariable Integer id) {
+    public @ResponseBody Optional<RecordLabel> getSpecificRecordLAbel(@PathVariable Integer id) {
         // This returns a JSON or XML with the users
         return this.recordLabelRepository.findById(id);
     }

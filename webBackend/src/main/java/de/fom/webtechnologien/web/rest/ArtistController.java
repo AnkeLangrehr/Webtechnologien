@@ -16,12 +16,15 @@ import java.util.Optional;
 public class ArtistController {
 
     @Autowired
-
     private ArtistRepository artistRepository;
+    @GetMapping(path="/all")
+    public @ResponseBody Iterable<Artist> getAllArtists() {
+        return artistRepository.findAll();
+    }
 
 
     @PostMapping(path="/add") // Map ONLY POST Requests
-    public @ResponseBody ResponseEntity<Artist> addNewAlbum (@RequestBody Artist artist) {
+    public @ResponseBody ResponseEntity<Artist> addNewArtist (@RequestBody Artist artist) {
         Artist n = new Artist();
         n.setName(artist.getName());
         n.setRecordLabel(artist.getRecordLabel());
@@ -30,12 +33,9 @@ public class ArtistController {
         return ResponseEntity.ok(n);
     }
 
-    @GetMapping(path="/all")
-    public @ResponseBody Iterable<Artist> getAllAlbum() {
-        return artistRepository.findAll();
-    }
+
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public @ResponseBody Optional<Artist> getSpecificAlbum(@PathVariable Integer id) {
+    public @ResponseBody Optional<Artist> getSpecificArtist(@PathVariable Integer id) {
         // This returns a JSON or XML with the users
         return this.artistRepository.findById(id);
     }

@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {SongService} from "../../../model/Services/song.service";
 
 @Component({
   selector: 'app-video-player',
@@ -10,10 +11,9 @@ export class VideoPlayerComponent implements OnInit {
   selectedID:string;
   @Input() videoId: string;
 
-  constructor() { }
+  constructor(private songService: SongService) { }
 
   ngOnInit(): void {
-    this.selectedID="dQw4w9WgXcQ";
     const tag = document.createElement('script');
     tag.src = 'https://www.youtube.com/iframe_api';
     document.body.appendChild(tag);

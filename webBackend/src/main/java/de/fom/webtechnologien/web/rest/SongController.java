@@ -19,7 +19,7 @@ public class SongController {
 
 
     @PostMapping(path="/add") // Map ONLY POST Requests
-    public @ResponseBody ResponseEntity<Song> addNewAlbum (@RequestBody Song song) {
+    public @ResponseBody ResponseEntity<Song> addNewSong (@RequestBody Song song) {
         Song n = new Song();
         n.setName(song.getName());
         n.setAlbum(song.getAlbum());

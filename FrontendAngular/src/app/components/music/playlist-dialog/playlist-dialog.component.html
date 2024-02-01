@@ -1,0 +1,13 @@
+<div class="dialog">
+  <p> Wo willst du den Song "{{selectedSong.name}}" hinzufügen?</p>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" *ngFor="let p of playlists">
+      <a class="dropdown-item">{{p.name}}</a>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-success">Add Song to Playlist</button>
+</div>
+

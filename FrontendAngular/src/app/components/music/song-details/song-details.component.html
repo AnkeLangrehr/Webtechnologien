@@ -1,18 +1,16 @@
-<div class="content" role="main">
+<div class="content compClass" role="main">
+  <div>
+    <button class=" btn btn-secondary buttonClass" routerLink="/artists">Zurück</button>
+  </div>
   <div class="row">
     <div class="col-sm">
-      <p>song works!</p>
-      <p>song Details are:</p>
-      <p>{{song.id}} </p>
-      <p>{{song.name}} </p>
+      <p>Nachfolgend bekommst du alle Details zu deinem gewälten Song angezeigt:</p>
+      <p>Die ID in der Datenbank ist: {{song.id}} </p>
+      <p> Der Song heißt: {{song.name}} </p>
+      <p>Und ist von dem Album: {{song.album.name}}</p>
+      <p>... der Band: {{song.album.artist.name}}</p>
     </div>
-<!--    <div class="col-sm"> TBD ImageLink/Video-->
-<!--      <img [src]="song.imageLink">-->
-<!--    </div>-->
   </div>
-</div>
-<div>
-  <button class=" btn btn-secondary" routerLink="/artists">Zurück</button>
 </div>
 <div>
  <app-video-player [videoId]="song.songUrl"></app-video-player>

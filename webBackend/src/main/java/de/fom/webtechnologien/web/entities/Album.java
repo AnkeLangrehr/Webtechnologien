@@ -13,7 +13,7 @@ public class Album {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "artist_id")
-    Artist artist;
+    private Artist artist;
 
 
     public Integer getId() {
