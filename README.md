@@ -4,7 +4,7 @@
 ## Erstellt von Robert Mederer, Patrick Schöneborn und Anke Langrehr
 
 ## Technologien
-In diesem Prokjekt kommen die nachfolgenden Technologien zum Einsatz:
+In diesem Projekt kommen die nachfolgenden Technologien zum Einsatz:
 
 Datenbank: 
 - MySQL
@@ -25,7 +25,7 @@ Frontend:
 
 ## Installation
 
-Um das Projekt erfolgreich starten zu können, sind verschiedene Schritte notwenmdig. 
+Um das Projekt erfolgreich starten zu können, sind verschiedene Schritte notwendig. 
 Diese werden nachfolgend erläutert. 
 
 ### Installation von Java
@@ -65,7 +65,7 @@ Für die Verwaltung des Frontends wird Node.js verwendet. Dies ermöglicht das A
 
 
 ### Installation und Anlegen der Datenbank
-Für das Anlegen der Datenbank kkann das Skript aus dem Verzeichnis **webBackend\src\main\resources** ausgeführt werden.
+Für das Anlegen der Datenbank kann das Skript aus dem Verzeichnis **webBackend\src\main\resources** ausgeführt werden.
 Das Skript enthält Beispieldaten und legt eine entsprechende Datenbank an.
 
 ### Installation des Backends
@@ -74,7 +74,7 @@ Das Skript enthält Beispieldaten und legt eine entsprechende Datenbank an.
 - **mvn -clean**
 - **mvn -install**
 - **mvn spring-boot:run**
-Durch den letzten befehl wird das Backkend gestartet und eine Verbindung zur Datenbank aufgebaut.
+Durch den letzten Befehl wird das Backend gestartet und eine Verbindung zur Datenbank aufgebaut.
 ### Installation des Frontends
 - In dem Verzeichnis *Pfad/zum/Projekt/FrontendAngular* muss eine Konsole geöffnet werden.
 - Danach werden in der Konsole folgende Befehle ausgeführt: 
