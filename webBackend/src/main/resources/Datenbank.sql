@@ -11,6 +11,9 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
+CREATE DATABASE IF NOT EXISTS `webappuni` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `webappuni`;
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -269,7 +272,7 @@ CREATE TABLE `song` (
 -- Daten für Tabelle `song`
 --
 
-INSERT INTO `song` (`album_id`, `id`, `name`, `song_url`, `duration`) VALUES
+INSERT INTO `song` ( `id`,`album_id`, `name`, `song_url`, `duration`) VALUES
 (1, 1, 'One', 'apK2jCrfnsk?si=US4wROGcF5Ot5jri', 7),
 (3,2,'Enter Sandman','CD-E-LDc384?si=_IfqkJws0RsFuyx5',5.3),
 (5,3,'Master of Puppets','E0ozmU9cJDg?si=mA-yugl2KuvYdKuS',8.35),

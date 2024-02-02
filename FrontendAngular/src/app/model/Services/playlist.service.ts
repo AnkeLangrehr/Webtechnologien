@@ -26,4 +26,11 @@ export class PlaylistService {
     return this.http.get<Playlist>(this.playlistByIdUrl+id);
 
   }
+  public addSongToPlaylist(song:Song){
+
+  }
+
+  public createPlaylist(){
+
+  }
 }

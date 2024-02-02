@@ -67,6 +67,7 @@ Für die Verwaltung des Frontends wird Node.js verwendet. Dies ermöglicht das A
 ### Installation und Anlegen der Datenbank
 Für das Anlegen der Datenbank kann das Skript aus dem Verzeichnis **webBackend\src\main\resources** ausgeführt werden.
 Das Skript enthält Beispieldaten und legt eine entsprechende Datenbank an.
+Es kann in der SQL-Eingabe der XAMPP-Administrationsoberfläche ausgeführt werden.
 
 ### Installation des Backends
 - In dem Verzeichnis *Pfad/zum/Projekt/webBackend* muss eine Konsole geöffnet werden. 
