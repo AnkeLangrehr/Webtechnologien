@@ -63,10 +63,11 @@ public class WebSecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth ->
                         auth.requestMatchers("**").permitAll()
-//                                .requestMatchers("/api/auth/signup").permitAll()
-//                                .requestMatchers("/test/**").permitAll()
-//                                .requestMatchers("/main").permitAll()
-//                                .anyRequest().authenticated()
+                                .requestMatchers("/auth/signup").permitAll()
+                                .requestMatchers("/auth/signin").permitAll()
+                                .requestMatchers("/artist/*").permitAll()
+                                .requestMatchers("/song//*").permitAll()
+                                .anyRequest().authenticated()
                 );
 
         http.authenticationProvider(authenticationProvider());
