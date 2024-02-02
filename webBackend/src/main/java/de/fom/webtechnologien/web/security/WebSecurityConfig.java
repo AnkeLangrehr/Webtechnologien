@@ -70,6 +70,7 @@ public class WebSecurityConfig {
 //                                .requestMatchers()
 //                                .anyRequest().authenticated()
                         auth.requestMatchers("/**").permitAll()
+                                .anyRequest().permitAll()
                 );
 
         http.authenticationProvider(authenticationProvider());
