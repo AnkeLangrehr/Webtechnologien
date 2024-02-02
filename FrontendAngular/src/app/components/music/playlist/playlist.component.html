@@ -1,5 +1,5 @@
 <div class="">
-  <form>
+  <form #playListForm=ngForm (ngSubmit)="saveNewPlaylist(playListForm)">
     <div class="form-group centering">
       <label for="Name">Playlist Name</label>
       <input type="text" class="form-control" id="Name" placeholder="Name">

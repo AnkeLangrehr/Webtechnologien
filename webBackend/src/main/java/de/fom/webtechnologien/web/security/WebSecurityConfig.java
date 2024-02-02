@@ -62,12 +62,14 @@ public class WebSecurityConfig {
                 .exceptionHandling(exception -> exception.authenticationEntryPoint(unauthorizedHandler))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth ->
-                        auth.requestMatchers("**").permitAll()
+//                        auth.requestMatchers("**").permitAll()
 //                                .requestMatchers("/auth/signup").permitAll()
 //                                .requestMatchers("/auth/signin").permitAll()
 //                                .requestMatchers("/artist/*").permitAll()
 //                                .requestMatchers("/song//*").permitAll()
+//                                .requestMatchers()
 //                                .anyRequest().authenticated()
+                        auth.requestMatchers("/**").permitAll()
                 );
 
         http.authenticationProvider(authenticationProvider());

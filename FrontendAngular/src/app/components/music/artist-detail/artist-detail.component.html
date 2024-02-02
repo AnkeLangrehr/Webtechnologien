@@ -1,19 +1,21 @@
 
 <div class="content" role="main">
-  <div class="row">
-    <div class="col-sm">
-      <p>artist-detail works!</p>
-      <p>Artist Details are:</p>
-      <p>{{artist.id}} </p>
-      <p>{{artist.name}} </p>
-      <p>{{artist.recordLabel.name}}</p>
+  <div class="centering">
+    <div>
+      <button class=" btn btn-secondary buttonCss" routerLink="/artists">Zurück</button>
     </div>
-    <div class="col-sm">
+    <div class="centering">
+      <p>Hier sind alle Details zum gewählten Künstler/Band:</p>
+      <p>Artist Details are:</p>
+      <p>Die ID in unserer Datenbank ist: {{artist.id}} </p>
+      <p>Der Name ist: {{artist.name}} </p>
+      <p>Veröffentlich werden die Lieder bei dem Label "{{artist.recordLabel.name}}"</p>
+    </div>
+    <div class="centering">
+    <p> Hier siehst du ein Bild:</p>
+    <div class="img">
       <img [src]="artist.imageLink">
     </div>
   </div>
-</div>
-<p>TBD: Alle Songs und Alben Auflisten</p>
-<div>
-  <button class=" btn btn-secondary" routerLink="/artists">Zurück</button>
+  </div>
 </div>

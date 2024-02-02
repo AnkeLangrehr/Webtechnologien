@@ -26,6 +26,10 @@ export class PlaylistService {
     return this.http.get<Playlist>(this.playlistByIdUrl+id);
 
   }
+
+  public addPlaylist(playlist:Playlist){
+    return this.http.post<Playlist>('api/playlist/add', playlist);
+  }
   public addSongToPlaylist(song:Song){
 
   }
