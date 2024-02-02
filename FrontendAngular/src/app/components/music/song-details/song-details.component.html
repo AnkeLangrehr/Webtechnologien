@@ -1,6 +1,6 @@
 <div class="content compClass" role="main">
   <div>
-    <button class=" btn btn-secondary buttonClass" routerLink="/artists">Zurück</button>
+    <button class=" btn btn-secondary buttonClass" routerLink="/songs">Zurück</button>
   </div>
   <div class="row">
     <div class="col-sm">
@@ -16,5 +16,5 @@
   </div>
 </div>
 <div>
- <app-video-player [videoId]="songId"></app-video-player>
+ <app-video-player [videoId]="song.songUrl"></app-video-player>
 </div>

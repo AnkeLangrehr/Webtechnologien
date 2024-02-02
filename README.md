@@ -72,13 +72,13 @@ Es kann in der SQL-Eingabe der XAMPP-Administrationsoberfläche ausgeführt werd
 ### Installation des Backends
 - In dem Verzeichnis *Pfad/zum/Projekt/webBackend* muss eine Konsole geöffnet werden. 
 - Danach werden in der Konsole folgende Befehle ausgeführt: 
-- **mvn -clean**
-- **mvn -install**
+- **mvn clean**
+- **mvn install**
 - **mvn spring-boot:run**
 Durch den letzten Befehl wird das Backend gestartet und eine Verbindung zur Datenbank aufgebaut.
 ### Installation des Frontends
 - In dem Verzeichnis *Pfad/zum/Projekt/FrontendAngular* muss eine Konsole geöffnet werden.
 - Danach werden in der Konsole folgende Befehle ausgeführt: 
-- **npm -install**
-- **ng -serve**
+- **npm install -force**
+- **ng serve**
 Durch den letzten Befehl wird das Projekt gestartet.
